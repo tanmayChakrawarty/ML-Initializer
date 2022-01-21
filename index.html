@@ -1,0 +1,200 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>ML Development Tool</title>
+
+	<!-- <meta name="description" content="">
+	<meta name="author" content="">
+	<meta property="og:image" content="https://raw.githubusercontent.com/akashp1712/pythonizr/master/resources/img/screens/screen1.png" />
+        <meta name="keywords" content="python,Machine Learning, ML project, scikit-learn, python code,python generator">
+	<meta name="viewport" content="width=device-width,initial-scale=1"> -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="stylesheet" href="resources/css/style.css">
+	<link rel="stylesheet" href="resources/css/pipeline.css">
+	<link rel="stylesheet" href="resources/css/highlight-theme.css">
+	<link rel="stylesheet" href="resources/css/loader.css">
+	<link rel="stylesheet" href="resources/css/octocat.css">
+    <script src="https://kit.fontawesome.com/a016e6e138.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id="all-content">
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+
+        <div id='octocat'>
+            <a href="https://github.com/" target="_blank"
+               class="github-corner" aria-label="View source on Github">
+                <svg width="80" height="80" viewBox="0 0 250 250"
+                     style="fill: #070707; color:#fff; position: absolute; top: 0; border: 0; right: 0; position:fixed;"
+                     aria-hidden="true">
+                    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+                    <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                          fill="currentColor" style="transform-origin: 130px 106px;"
+                          class="octo-arm"></path>
+                    <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                          fill="currentColor" class="octo-body"></path>
+                </svg>
+            </a>
+        </div>
+
+        <div id="header-container">
+            <header class="wrapper clearfix">
+                <div id="html5-logo-container">
+                    <img src="resources/img/opengraph-icon-200x200.png" alt="" />
+                </div>
+                <div id="title-container">
+                    <h1>Web-Based ML Code Generator</h1>
+                    <h2>Generate Boilerplate for Machine Learning code</h2>
+                </div>
+                <!-- <div id="html5-logo-container">
+                    <img src="resources/img/opengraph-icon-200x200.png" alt="" />
+                </div> -->
+                <!-- <div id="follow-container">
+                    <p><a id="author" href="https://akashpanchal.com" target="_blank">Akash Panchal</a></p>
+                </div> -->
+            </header>
+        </div>
+        <div id="main-container">
+            <div id="main" class="wrapper clearfix">
+                <div id="intro" class="clearfix">
+                    <!--<div id="badges" class="clearfix">-->
+                        <!--<ul>-->
+                            <!--<li><div class="badge-label">scikit-learn<br />0.22.2<br/></div></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <br/>
+                    <p>Pythonizr is a tool to generate boilerplate code for the machine learning development. Few clicks and you are ready to ML!<br/>
+                        The project requires <b>scikit-learn</b> library for python. You can install using
+                        <a href="https://raw.githubusercontent.com/akashp1712/pythonizr/master/resources/data/requirements.txt" target="_blank">requirements.txt</a> file</p>
+                </div>
+                <h2 class="separator">
+                    1 - Pick Model Type
+                </h2>
+                <div id="preconfig-section" class="clearfix">
+                    <div class="preconfig-container initializr-background">
+                        <button id="preconfig-regression" class="preconfig-block initializr-background clearfix">
+                            <h3>Regression</h3>
+                        </button>
+                    </div>
+                    <div class="preconfig-container web-background">
+                        <button id="preconfig-classification" class="preconfig-block blank-background clearfix">
+                            <h3>Classification</h3>
+                        </button>
+                    </div>
+                </div>
+                <div id="hidden-section">
+                    <h2 id="fine-tuning-separator" class="separator">
+                        2 - Model Selection
+                    </h2>
+                    <div id="customize-section" class="clearfix">
+                        <div id="pre-processing" class="customize-section">
+                            <h3>Pre-Processing</h3>
+                            <label><input type="checkbox" value="dataLoading" disabled="disabled">Data loading
+                                <a class="more_info"><span class="tooltiptext">Data loading method</span></a>
+                            </label>
+                            <label><input type="checkbox" value="normalization">Normalization</label>
+                            <label><input type="checkbox" value="trainTestSplit">Train-Test split</label>
+                        </div>
+                        <div id="models" class="customize-section">
+                            <h3>Model</h3>
+                            <div id="regression-models">
+                                <label><input type="radio" name="regression_models" value="linearReg">Linear Regression</label>
+                                <label><input type="radio" name="regression_models" value="decisionTree">Decision Tree</label>
+                                <label><input type="radio" name="regression_models" value="randomForestRegressor">Random Forest Classifier</label>
+                            </div>
+
+                            <div id="classification-models">
+                                <label><input type="radio" name="clasification_models" value="svm">SVM</label>
+                                <label><input type="radio" name="clasification_models" value="sgd">Stochastic Gradient Descent</label>
+                                <label><input type="radio" name="clasification_models" value="logisticReg">Logistic Regression</label>
+                                <label><input type="radio" name="clasification_models" value="randomForestClassifier">Random Forest Classifier</label>
+                                <label><input type="radio" name="clasification_models" value="kNeighbors">K-Neighbors Classifier</label>
+                            </div>
+                        </div>
+                        <div id="post-processing" class="customize-section">
+                            <h3>Post-processing</h3>
+                            <div id="regression-techniques">
+                                <label><input type="radio" name="regression_techniques" value="mae">Mean Absolute Error</label>
+                                <label><input type="radio" name="regression_techniques" value="mse">Mean Squared Error</label>
+                                <label><input type="radio" name="regression_techniques" value="r2Score">R² Score</label>
+                            </div>
+
+                            <div id="classification-techniques">
+                                <label><input type="radio" name="classification_techniques" value="accuracyScore">Accuracy Score</label>
+                                <label><input type="radio" name="classification_techniques" value="confusionMatrix">Confusion Matrix</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="section">
+                        <section class="container">
+                          <div class="container__sources">
+                            <!-- The pipeline visual will be generated here by the javascript -->
+                          </div>
+                        </section>
+                    </div>
+                    <h2 class="separator">3 - Code</h2>
+                    <!--<div id="download-section" class="clearfix">
+                        <a id="download-link" href="#" onclick="download()">View Code!</a>
+                    </div>-->
+                    <pre id='codeblock'>
+                      <code id='code' class='python'></code>
+                        <!--TODO: Add copy button to copy the code-->
+                    </pre>
+                </div>
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div id="about-container">
+		<div class="wrapper">
+			<div id="github-container" class="clearfix">
+				<img src="resources/img/github-logo.png" alt="Github logo" />
+				<div id="github-repositories">
+                    <a target="_blank" href="https://github.com/akashp1712/pythonizr"><h3>Github Repository</h3></a>
+                </div>
+			</div>
+			<article id="docs">
+				<h3>About Pythonizr</h3>
+				<p>Pythonizer is built to make a small contribution towards the development of the intelligent systems.</p>
+                <p><i>Technology does not Automatically improve, It improves when a lot of people work hard to make it better</i> — <b>Elon Musk</b></p>
+
+				<h3>Contact</h3>
+                <!--<p>Feel free to <a target="_blank" href="https://github.com/akashp1712/pythonizr/issues/new "><strong>raise an issue</strong></a> for any suggestions, a bug or a feature request.<br/>-->
+				Connect with me on <a target="_blank" href="https://www.linkedin.com/in/akash-panchal-2222749a/"><strong>Linkedin</strong></a>.</p>
+
+			</article>
+
+		</div>
+	</div>
+    </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>-->
+<script src="resources/js/main.js"></script>
+<script>
+	var _gaq=[['_setAccount','UA-73098164-2'],['_trackPageview']];
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<!--Highlight JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  hljs.configure({useBR: true});
+</script>
+
+<script src="resources/js/highlightjs-badge-min.js"></script>
+
+</body>
+</html>
